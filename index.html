@@ -2180,7 +2180,7 @@ Andrés.</div>
     }
 
     function isDayUnlocked(dayNumber) {
-      return true;
+      if (previewMode) return true;
       const ec = getEcuadorDateParts();
       // Antes de diciembre (meses 1 a 11): todo bloqueado
       if (ec.month < 12) return false;
